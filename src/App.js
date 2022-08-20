@@ -1,5 +1,4 @@
-
-import './App.css';
+import React, { useState } from 'react';
 
 const menu = [
   {
@@ -86,6 +85,8 @@ const menu = [
 ];
 
 function App() {
+ const [menuList, setMenuList]  = useState(menu);
+ 
   return (
    <section>
     <h1>Menu</h1>
