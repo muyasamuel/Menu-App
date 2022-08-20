@@ -1,8 +1,25 @@
 import React from 'react'
 
-function MenuList() {
+function MenuList({menuItems}) {
+
+    
   return (
-    <div>MenuList</div>
+    <div>
+        {menuItems.map((menuItem) => {
+            const { id,price, name } = menuItem;
+            return (
+                <article key={id}>
+                    <h1>{name}</h1>
+                    <p>{price}</p>
+
+                </article>
+            )
+        
+        })}
+        
+     
+        
+    </div>
   )
 }
 

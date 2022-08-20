@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MenuList from './components/MenuList';
 
 const menu = [
   {
@@ -86,10 +87,14 @@ const menu = [
 
 function App() {
  const [menuList, setMenuList]  = useState(menu);
- 
+
+
+
+
   return (
-   <section>
+   <section className='section'>
     <h1>Menu</h1>
+    <MenuList menuItems={menuList} />
 
    </section>
   );
