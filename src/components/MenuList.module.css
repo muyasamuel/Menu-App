@@ -1,0 +1,14 @@
+.wrapper{
+    width: 90%;
+    margin: 15px;
+    height: auto;
+    background-color: aquamarine;
+    margin: auto;
+   
+}
+
+.image{
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+ }
