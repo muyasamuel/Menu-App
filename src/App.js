@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import MenuList from './components/MenuList';
 import Header from './components/Header';
+import Categories from './components/Categories';
 
 const menu = [
   {
@@ -95,9 +96,14 @@ function App() {
  const [categories, setCategories] = useState([]);
 
  const filterItems = (category) => {
+  if(category === 'All') {
+    setMenuList(menu)
+  }
   const newItems = menuList.filter((item) => item.category === category);
   setMenuList(newItems);
  }
+
+
 
 
 
