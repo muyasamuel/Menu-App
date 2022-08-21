@@ -88,7 +88,8 @@ const menu = [
 ];
 
 
-
+const allCategories = new Set(menu.map((item) => item.category)) 
+console.log(allCategories)
 
 
 function App() {
