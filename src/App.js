@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import MenuList from './components/MenuList';
+import Header from './components/Header';
 
 const menu = [
   {
@@ -93,7 +94,7 @@ function App() {
 
   return (
    <section className='section'>
-    <h1>Menu</h1>
+    <Header />
     <MenuList menuItems={menuList} />
 
    </section>
