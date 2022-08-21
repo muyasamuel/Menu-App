@@ -88,13 +88,13 @@ const menu = [
 ];
 
 
-const allCategories = new Set(menu.map((item) => item.category)) 
+const allCategories = ['All',...new Set(menu.map((item) => item.category)) ]
 console.log(allCategories)
 
 
 function App() {
  const [menuList, setMenuList]  = useState(menu);
- const [categories, setCategories] = useState([]);
+ const [categories, setCategories] = useState([allCategories]);
 
  const filterItems = (category) => {
   if(category === 'All') {
@@ -114,7 +114,7 @@ function App() {
   return (
    <section className='section'>
     <Header />
-    <Categories filterItems={filterItems} />
+    <Categories  filterItems={filterItems} />
     <MenuList menuItems={menuList} />
 
    </section>
