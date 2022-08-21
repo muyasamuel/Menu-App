@@ -89,7 +89,7 @@ const menu = [
 
 
 const allCategories = ['All',...new Set(menu.map((item) => item.category)) ]
-console.log(allCategories)
+
 
 
 function App() {
@@ -114,7 +114,7 @@ function App() {
   return (
    <section className='section'>
     <Header />
-    <Categories  filterItems={filterItems} />
+    <Categories categories={categories}  filterItems={filterItems} />
     <MenuList menuItems={menuList} />
 
    </section>
