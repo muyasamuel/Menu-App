@@ -86,8 +86,13 @@ const menu = [
 
 ];
 
+
+
+
+
 function App() {
  const [menuList, setMenuList]  = useState(menu);
+ const [categories, setCategories] = useState()
 
 
 
