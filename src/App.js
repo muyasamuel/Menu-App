@@ -92,7 +92,14 @@ const menu = [
 
 function App() {
  const [menuList, setMenuList]  = useState(menu);
- const [categories, setCategories] = useState()
+ const [categories, setCategories] = useState([]);
+
+ const filterItems = (category) => {
+  const newItems = menuList.filter((item) => item.category === category);
+  setMenuList(newItems);
+ }
+
+
 
 
 
@@ -100,6 +107,7 @@ function App() {
   return (
    <section className='section'>
     <Header />
+    <Categories filterItems={filterItems} />
     <MenuList menuItems={menuList} />
 
    </section>
