@@ -30,7 +30,7 @@ const menu = [
   },
   {
     id: '4',
-    name: 'hanel',
+    name: 'bananaChops',
     category: 'dinner',
     price: 25.99,
     img: require('./assets/bananaChops.jpg'),
@@ -38,7 +38,7 @@ const menu = [
   },
   {
     id: '5',
-    name: 'hanel',
+    name: 'burger',
     category: 'dinner',
     price: 25.99,
     img: require('./assets/burger.jpg'),
@@ -46,7 +46,7 @@ const menu = [
   },
   {
     id: '6',
-    name: 'hanel',
+    name: 'cruncky',
     category: 'lunch',
     price: 25.99,
     img: require('./assets/cruncky.jpg'),
@@ -54,7 +54,7 @@ const menu = [
   },
   {
     id: '7',
-    name: 'hanel',
+    name: 'cookies',
     category: 'breakfast',
     price: 25.99,
     img: require('./assets/cookies.jpg'),
@@ -62,7 +62,7 @@ const menu = [
   },
   {
     id: '8',
-    name: 'hanel',
+    name: 'yorky',
     category: 'lunch',
     price: 25.99,
     img: require('./assets/yorky.jpg'),
@@ -70,7 +70,7 @@ const menu = [
   },
   {
     id: '9',
-    name: 'hanel',
+    name: 'salad',
     category: 'dinner',
     price: 25.99,
     img: require('./assets/salad.jpg'),
@@ -78,7 +78,7 @@ const menu = [
   },
   {
     id: '10',
-    name: 'hanel',
+    name: 'toast',
     category: 'breakfast',
     price: 25.99,
     img: require('./assets/toast.jpg'),
@@ -88,19 +88,21 @@ const menu = [
 ];
 
 
-const allCategories = ['All',...new Set(menu.map((item) => item.category)) ]
+const allCategories = ['All',...new Set(menu.map((item) => item.category)) ];
+console.log(allCategories)
 
 
 
 function App() {
  const [menuList, setMenuList]  = useState(menu);
- const [categories, setCategories] = useState([allCategories]);
+ const [categories, setCategories] = useState(allCategories);
 
  const filterItems = (category) => {
   if(category === 'All') {
-    setMenuList(menu)
+    setMenuList(menu);
+    return;
   }
-  const newItems = menuList.filter((item) => item.category === category);
+  const newItems = menu.filter((item) => item.category === category);
   setMenuList(newItems);
  }
 

@@ -1,0 +1,22 @@
+.category{
+    padding: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    color: aliceblue;
+    background-color: #0c3564;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+.btn:not(:last-child){
+    margin-right: 1rem;
+}
+
+.btn:active{
+    border: 1px solid #fff;
+}
